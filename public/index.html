@@ -1,0 +1,120 @@
+<!--
+    Copyright 2022 Patrick L. Branson
+    
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stylesheets/styles.css" />
+    <script src="./javascripts/scripts.js" defer></script>
+    <title>Credit Card Simulator</title>
+  </head>
+  <body>
+    <form class="credit-card">
+      <div class="front">
+        <div class="card-data-row">
+          <div class="brand-name">Test Bank</div>
+          <img
+            data-logo
+            src="./images/visa.svg"
+            alt="visa card logo"
+            class="logo"
+          />
+        </div>
+        <fieldset class="form-group">
+          <legend>Card Number</legend>
+          <label for="cc-1">Card Number</label>
+          <div data-connected-inputs class="cc-inputs horizontal-input-stack">
+            <input
+              type="tel"
+              maxlength="4"
+              aria-label="Credit Card First 4 Digits"
+              id="cc-1"
+              required
+              pattern="[0-9]{4}"
+            />
+            <input
+              type="tel"
+              maxlength="4"
+              aria-label="Credit Card Second 4 Digits"
+              required
+              pattern="[0-9]{4}"
+            />
+            <input
+              type="tel"
+              maxlength="4"
+              aria-label="Credit Card Third 4 Digits"
+              required
+              pattern="[0-9]{4}"
+            />
+            <input
+              type="tel"
+              maxlength="4"
+              aria-label="Credit Card Last 4 Digits"
+              required
+              pattern="[0-9]{4}"
+            />
+          </div>
+        </fieldset>
+        <div class="input-row">
+          <div class="form-group name-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required />
+          </div>
+          <fieldset class="form-group">
+            <legend>Expiration</legend>
+            <label for="expiration-month">Expiration</label>
+            <div class="horizontal-input-stack">
+              <select
+                id="expiration-month"
+                aria-label="Expiration Month"
+                required
+              >
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+              </select>
+              <select
+                id="expiration-year"
+                aria-label="Expiration Year"
+                required
+                data-expiration-year
+              ></select>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="back">
+        <div class="stripe"></div>
+        <div class="form-group cvc-group">
+          <label for="cvc">CVC</label>
+          <input class="cvc-input" type="tel" maxlength="3" id="cvc" required />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

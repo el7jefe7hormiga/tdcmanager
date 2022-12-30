@@ -1,0 +1,42 @@
+{
+  "name": "nodejs-credit-card",
+  "version": "1.0.0",
+  "description": "NodeJS Lector de Tarjetas de Credito",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/el7jefe7hormiga/tdcmanager.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "cors",
+    "dotenv",
+    "helmet",
+    "express",
+    "javascript"
+  ],
+  "author": "aLL",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/el7jefe7hormiga/tdcmanager/issues"
+  },
+  "homepage": "https://github.com/el7jefe7hormiga/tdcmanager#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
